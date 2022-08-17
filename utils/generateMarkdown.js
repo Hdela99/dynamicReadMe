@@ -57,8 +57,9 @@ ${data.contributions}
 ${data.installation}
 
 ## Questions
-${data.email}
-${data.github}
+If you have questions feel free to reach out\n
+Email: [${data.email}](${data.email}) \n
+Github: [${data.github}](${data.github})
 
 ## License
 ${this.renderLicenseSection(data.license)}
