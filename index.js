@@ -41,7 +41,7 @@ const questions = [
     type: "list",
     message: "What licenses are required with this project?",
     name: "license",
-    choices: ["MIT", "ISC", "GNUPLv3"],
+    choices: ["MIT", "ISC", "none"],
     filter(val) {
       return val.toLowerCase();
     }
@@ -75,8 +75,16 @@ const questions = [
 function writeToFile(fileName, data) {
     return inquirer.prompt(data)
     .then((answers) => {
-      const gen = markDown(answers);
-      })
+      const gen = markDown.generateMarkdown(answers);
+      fs.writeFile(fileName, gen, function (err) {
+        if(err)  {
+          console.log('could not save file')
+        } else { 
+          console.log(`Success: new README created! `)
+        }
+     })
+
+  })
       .catch((error) => {
         console.log(error);
       })
@@ -88,5 +96,4 @@ function init() {
 }
 
 // Function call to initialize app
-// init();
-writeToFile("readme", questions);
+init();
