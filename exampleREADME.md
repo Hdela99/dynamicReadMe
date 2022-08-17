@@ -1,5 +1,5 @@
 
-# dynamic README generator
+# dynamic Read Me 
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
@@ -31,5 +31,5 @@ Email: [Hdelacruz1999@gmail.com](Hdelacruz1999@gmail.com)
 Github: [https://github.com/Hdela99](https://github.com/Hdela99)
 
 ## License
- 
+Licensed under the [ISC](https://choosealicense.com/licenses/isc/) license.
   
