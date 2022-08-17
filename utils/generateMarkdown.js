@@ -15,7 +15,7 @@ function renderLicenseLink(license) {
   const licenseLinks = {
     isc: `[ISC](https://choosealicense.com/licenses/isc/)`,
     mit: `[MIT](https://choosealicense.com/licenses/mit/)`,
-    none: null
+    none: false
   }
   return licenseLinks[license];
 }
@@ -23,7 +23,7 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if(this.renderLicenseLinklicense != null) {
+  if(renderLicenseLink(license)) {
     return `Licensed under the ${this.renderLicenseLink(license)} license.`
   } else {return ` `}
   
